@@ -6,11 +6,11 @@ All you need to do is to create a bookmark and paste this as the URL:
 JavaScript:(
     function(){
         const htmlElement = document.documentElement; 
-        const filter_str = "invert(1) contrast(75%) hue-rotate(180deg)"; 
-        if (htmlElement.style.filter === filter_str) { 
+        const filterStr = "invert(1) contrast(75%) hue-rotate(180deg)"; 
+        if (htmlElement.style.filter === filterStr) { 
             htmlElement.style.filter = ""; 
         } else { 
-            htmlElement.style.filter = filter_str; 
+            htmlElement.style.filter = filterStr; 
         } 
     }
 )(); 
