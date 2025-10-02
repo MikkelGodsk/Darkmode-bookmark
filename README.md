@@ -1,5 +1,7 @@
 # PDF-darkmode
-To make a button that can enable PDF darkmode in your browser, create a bookmark and paste this code as your URL:
+This repo contains a simple bookmark you can add to your web browser to enable colour inversion for PDF files to help with eye strain while reading.
+
+All you need to do is to create a bookmark and paste this as the URL:
 ```
 JavaScript:(
     function(){
