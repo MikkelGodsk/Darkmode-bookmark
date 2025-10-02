@@ -15,6 +15,8 @@ JavaScript:(
     }
 )(); 
 ```
+When you're viewing a PDF file, click the bookmark to execute the colour inversion.
+
 I've tested it on the following browsers:
 - On PC: Chrome, Edge, Firefox
 - On iOS: Brave, Safari, Firefox
