@@ -20,3 +20,22 @@ When you're viewing a PDF file, click the bookmark to execute the colour inversi
 I've tested it on the following browsers:
 - On PC: Chrome, Edge, Firefox
 - On iOS: Brave, Safari, Firefox
+
+
+A more elaborate book that'll also re-invert images is this:
+```
+javascript:(function(){
+    const htmlElement = document.documentElement;
+    const filter_str = "invert(1) hue-rotate(180deg) contrast(75%)";
+    const media_filter_str = "invert(1) hue-rotate(180deg) contrast(133%)";
+    const media_elements = document.querySelectorAll('img, svg, video');
+
+    if (htmlElement.style.filter) {
+        htmlElement.style.filter = "";
+        media_elements.forEach(media => media.style.filter = "");
+    } else {
+        htmlElement.style.filter = filter_str;
+        media_elements.forEach(media => media.style.filter = media_filter_str);
+    }
+})();
+```
