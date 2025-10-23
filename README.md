@@ -1,4 +1,4 @@
-# PDF-darkmode
+# Darkmode-bookmark
 This repo contains a simple bookmark you can add to your web browser to enable colour inversion for PDF files to help with eye strain while reading.
 
 All you need to do is to create a bookmark and paste this as the URL:
