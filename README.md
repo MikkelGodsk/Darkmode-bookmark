@@ -22,7 +22,7 @@ I've tested it on the following browsers:
 - On iOS: Brave, Safari, Firefox
 
 
-A more elaborate bookmark that'll also re-invert images is this:
+A more elaborate bookmark that'll also re-invert images:
 ```
 javascript:(function(){
     const htmlElement = document.documentElement;
