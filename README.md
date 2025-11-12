@@ -23,19 +23,25 @@ I've tested it on the following browsers:
 
 
 A more elaborate bookmark that'll also work on websites while preserving the images (although there will be some loss of colour vibrancy):
-```
-javascript:(function(){
-    const htmlElement = document.documentElement;
-    const filter_str = "invert(1) hue-rotate(180deg) contrast(75%)";
-    const media_filter_str = "invert(1) hue-rotate(180deg) contrast(133%)";
-    const media_elements = document.querySelectorAll('img, svg, video');
-
-    if (htmlElement.style.filter) {
-        htmlElement.style.filter = "";
-        media_elements.forEach(media => media.style.filter = "");
-    } else {
-        htmlElement.style.filter = filter_str;
-        media_elements.forEach(media => media.style.filter = media_filter_str);
+```js
+javascript:(function() {
+    document.documentElement.classList.toggle('dark-mode-bookmarklet');
+    if (!document.getElementById('dark-mode-bookmarklet-style')) {
+        var style = document.createElement('style');
+        style.id = 'dark-mode-bookmarklet-style';
+        style.textContent = `
+            .dark-mode-bookmarklet {
+                filter: invert(1) hue-rotate(180deg) contrast(75%);
+                background-color: #fefefe;
+            }
+            .dark-mode-bookmarklet img,
+            .dark-mode-bookmarklet video,
+            .dark-mode-bookmarklet iframe,
+            .dark-mode-bookmarklet svg {
+                filter: invert(1) hue-rotate(180deg) contrast(133%);
+            }
+        `;
+        document.head.appendChild(style);
     }
 })();
 ```
