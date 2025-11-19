@@ -41,6 +41,7 @@ javascript:(function() {
             .dark-mode-bookmarklet iframe,
             .dark-mode-bookmarklet svg {
                 filter: invert(1) hue-rotate(180deg) contrast(133%);
+                background-color: #bebebe;
             }
         `;
         document.head.appendChild(style);
